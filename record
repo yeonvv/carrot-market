@@ -1,0 +1,7 @@
+basic-padding: py-12 px-10
+basic-bg: bg-orange-500
+hover-bg: bg-orange-400
+text-color-basic: text-gray-700
+text-color-soft: text-gray-500
+button: p-2 bg-orange-500 text-white font-medium rounded-xl shadow-lg hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition
+floating button: fixed bottom-20 right-5 p-2 text-white shadow-xl bg-orange-500 rounded-full hover:bg-orange-400 cursor-pointer transition
