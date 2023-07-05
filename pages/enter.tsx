@@ -10,7 +10,7 @@ export default function Enter() {
   }
 
   return (
-    <div className="mt-12">
+    <div className="py-12 h-screen bg-gradient-to-br from-orange-50 to-orange-100">
       <h3 className="text-3xl font-bold text-center text-gray-700">
         Enter to Carrot
       </h3>
@@ -44,13 +44,17 @@ export default function Enter() {
         </div>
         <div className="px-4">
           <form className="flex flex-col mt-5 mb-10">
-            <label className="text-sm text-gray-800 font-medium">
+            <label
+              htmlFor="choice"
+              className="text-sm text-gray-700 font-medium"
+            >
               {method === "email" ? "Email address" : null}
               {method === "phone" ? "Phone number" : null}
             </label>
             <div className="my-2">
               {method === "email" ? (
                 <input
+                  id="choice"
                   type="email"
                   className="appearance-none w-full transition shadow-md rounded-lg placeholder-gray-400 border-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
                   required
@@ -63,6 +67,7 @@ export default function Enter() {
                     +82
                   </span>
                   <input
+                    id="choice"
                     type="number"
                     className="appearance-none w-full transition rounded-r-lg placeholder-gray-400 border-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
                     required
@@ -80,13 +85,13 @@ export default function Enter() {
             <div className="relative">
               <div className="absolute w-full border-t border-gray-300" />
               <div className="relative -top-3 mt-3 text-center">
-                <span className="px-2 bg-white text-gray-500 text-base font-medium select-none">
+                <span className="px-2 bg-gradient-to-br from-orange-50 to-orange-100 text-gray-500 text-base font-medium select-none">
                   Or enter with
                 </span>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3 text-gray-700 mt-1">
-              <div className="flex justify-center items-center space-x-2 py-2 rounded-lg shadow-md border-2 border-gray-400 hover:bg-gray-100 cursor-pointer">
+              <div className="flex justify-center items-center space-x-2 py-2 rounded-lg shadow-md border-2 border-gray-400 hover:bg-orange-100 hover:font-medium cursor-pointer">
                 <button>
                   <svg
                     className="w-5 h-5"
@@ -99,7 +104,7 @@ export default function Enter() {
                 </button>
                 <span>Twitter</span>
               </div>
-              <div className="flex justify-center items-center space-x-2 py-2 rounded-lg shadow-md border-2 border-gray-400 hover:bg-gray-100 cursor-pointer">
+              <div className="flex justify-center items-center space-x-2 py-2 rounded-lg shadow-md border-2 border-gray-400 hover:bg-orange-100 hover:font-medium cursor-pointer">
                 <button>
                   <svg
                     className="w-5 h-5"
