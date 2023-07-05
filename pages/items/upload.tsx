@@ -2,7 +2,7 @@ import { NextPage } from "next";
 
 const Upload: NextPage = () => {
   return (
-    <div className="py-12 px-10 w-full space-y-7 select-none">
+    <form className="py-12 px-10 w-full space-y-7 select-none">
       <div>
         <label className="flex items-center justify-center h-48 text-gray-700 border-2 border-dashed border-gray-400 rounded-xl hover:text-orange-500 hover:border-orange-500 hover:bg-gradient-to-br from-orange-50 to-orange-100 transition cursor-pointer">
           <svg
@@ -49,11 +49,11 @@ const Upload: NextPage = () => {
           rows={4}
           className="appearance-none w-full shadow-md rounded-lg placeholder-gray-400 border-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500 transition"
         />
+        <button className="w-full py-2 bg-orange-500 text-white font-medium rounded-xl shadow-lg hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition">
+          Upload product
+        </button>
       </div>
-      <button className="w-full py-2 bg-orange-500 text-white font-medium rounded-xl shadow-lg hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition">
-        Upload product
-      </button>
-    </div>
+    </form>
   );
 };
 
