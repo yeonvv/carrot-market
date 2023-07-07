@@ -87,7 +87,7 @@ const Profile: NextPage = () => {
       </div>
       <div className="px-10 divide-y-[1px]">
         {[1, 2, 3].map((_, i) => (
-          <div className="py-5 space-y-2">
+          <div key={i} className="py-5 space-y-2">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full bg-slate-400" />
               <div className="flex flex-col items-start">
