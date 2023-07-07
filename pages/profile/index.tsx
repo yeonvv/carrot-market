@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 
 const Profile: NextPage = () => {
   return (
-    <div className="h-screen py-12  text-gray-700 bg-gradient-to-br from-orange-50 to-orange-100">
+    <div className="h-screen py-12 text-gray-700 bg-gradient-to-br from-orange-50 to-orange-100">
       <div className="flex items-center px-10 space-x-3 pb-5">
         <div className="w-14 h-14 rounded-full bg-slate-400 cursor-pointer" />
         <div className="flex flex-col space-y-1">
