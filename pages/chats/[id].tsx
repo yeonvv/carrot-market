@@ -5,91 +5,91 @@ const ChatDetail: NextPage = () => {
     <div className="h-full py-12  bg-gradient-to-br from-orange-50 to-orange-100">
       <div className="px-10 space-y-8">
         <div className="flex items-start space-x-3">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tl-none bg-gradient-to-br from-orange-200 to-orange-100">
             Hi how much are you selling them for?
           </div>
         </div>
         <div className="flex flex-row-reverse items-start space-x-3 space-x-reverse">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tr-none bg-gradient-to-br from-orange-100 to-orange-200">
             I want ￦20,000
           </div>
         </div>
         <div className="flex items-start space-x-3">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tl-none bg-gradient-to-br from-orange-200 to-orange-100">
             미쳤어
           </div>
         </div>
         <div className="flex items-start space-x-3">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tl-none bg-gradient-to-br from-orange-200 to-orange-100">
             Hi how much are you selling them for?
           </div>
         </div>
         <div className="flex flex-row-reverse items-start space-x-3 space-x-reverse">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tr-none bg-gradient-to-br from-orange-100 to-orange-200">
             I want ￦20,000
           </div>
         </div>
         <div className="flex items-start space-x-3">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tl-none bg-gradient-to-br from-orange-200 to-orange-100">
             미쳤어
           </div>
         </div>
         <div className="flex items-start space-x-3">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tl-none bg-gradient-to-br from-orange-200 to-orange-100">
             Hi how much are you selling them for?
           </div>
         </div>
         <div className="flex flex-row-reverse items-start space-x-3 space-x-reverse">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tr-none bg-gradient-to-br from-orange-100 to-orange-200">
             I want ￦20,000
           </div>
         </div>
         <div className="flex items-start space-x-3">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tl-none bg-gradient-to-br from-orange-200 to-orange-100">
             미쳤어
           </div>
         </div>
         <div className="flex items-start space-x-3">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tl-none bg-gradient-to-br from-orange-200 to-orange-100">
             Hi how much are you selling them for?
           </div>
         </div>
         <div className="flex flex-row-reverse items-start space-x-3 space-x-reverse">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tr-none bg-gradient-to-br from-orange-100 to-orange-200">
             I want ￦20,000
           </div>
         </div>
         <div className="flex items-start space-x-3">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tl-none bg-gradient-to-br from-orange-200 to-orange-100">
             미쳤어
           </div>
         </div>
         <div className="flex items-start space-x-3">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tl-none bg-gradient-to-br from-orange-200 to-orange-100">
             Hi how much are you selling them for?
           </div>
         </div>
         <div className="flex flex-row-reverse items-start space-x-3 space-x-reverse">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tr-none bg-gradient-to-br from-orange-100 to-orange-200">
             I want ￦20,000
           </div>
         </div>
         <div className="flex items-start space-x-3">
-          <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+          <div className="w-10 h-10 rounded-full bg-slate-400" />
           <div className="mt-5 py-1 px-2 rounded-lg w-1/2 rounded-tl-none bg-gradient-to-br from-orange-200 to-orange-100">
             미쳤어
           </div>
