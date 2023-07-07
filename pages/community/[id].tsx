@@ -2,18 +2,18 @@ import type { NextPage } from "next";
 
 const CommunityPostDetail: NextPage = () => {
   return (
-    <div className="py-12 px-10 h-screen space-y-2 bg-gradient-to-br from-orange-50 to-orange-100 text-gray-700">
+    <div className="py-12 px-10 h-screen space-y-5 bg-gradient-to-br from-orange-50 to-orange-100 text-gray-700">
       <span className="inline-flex items-center justify-center px-2.5 py-0.5 text-sm text-gray-700 font-medium bg-gray-200 rounded-full">
         동네질문
       </span>
-      <div className="flex items-center py-3 space-x-3 cursor-pointer border-b">
+      <div className="flex items-center space-x-3 cursor-pointer">
         <div className="w-10 h-10 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
         <div className="space-y-1">
           <p className="text-sm text-gray-700 font-medium">Steve Jebs</p>
           <p className="text-xs text-gray-500">View profile &rarr;</p>
         </div>
       </div>
-      <div className="pt-5 space-y-3 text-gray-700">
+      <div className="space-y-3 text-gray-700">
         <div>
           <span className="text-orange-500 font-bold">Q.</span> What is the best
           mandu restaurant?
@@ -55,20 +55,22 @@ const CommunityPostDetail: NextPage = () => {
           </span>
         </div>
       </div>
-      {[1, 2, 3, 4].map((_, i) => (
-        <div key={i} className="flex items-start py-2 space-x-3 border-t">
-          <div className="w-8 h-8 rounded-full bg-slate-400" />
-          <div className="w-4/5">
-            <div className="flex items-center space-x-3">
-              <span className="text-sm text-gray-500 font-medium">
-                Steve Jebs
-              </span>
-              <span className="text-xs text-gray-500">2시간 전</span>
+      <div className="divide-y-[1px]">
+        {[1, 2, 3, 4].map((_, i) => (
+          <div key={i} className="flex items-start py-2 space-x-3">
+            <div className="w-8 h-8 rounded-full bg-slate-400" />
+            <div className="w-4/5">
+              <div className="flex items-center space-x-3">
+                <span className="text-sm text-gray-500 font-medium">
+                  Steve Jebs
+                </span>
+                <span className="text-xs text-gray-500">2시간 전</span>
+              </div>
+              <p>The best mandu restaurant is the one next to my house.</p>
             </div>
-            <p>The best mandu restaurant is the one next to my house.</p>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className="space-y-2">
         <textarea
           rows={4}

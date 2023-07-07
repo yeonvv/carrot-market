@@ -2,11 +2,11 @@ import { NextPage } from "next";
 
 const Coummunity: NextPage = () => {
   return (
-    <div className="py-12 h-screen bg-gradient-to-br from-orange-50 to-orange-100">
+    <div className="py-12 h-screen bg-gradient-to-br from-orange-50 to-orange-100 divide-y-[1px]">
       {[1, 2, 3, 4, 5].map((_, i) => (
         <div
           key={i}
-          className="flex flex-col items-start space-y-3 py-5 px-10 border-b bg-gradient-to-br from-orange-50 to-orange-100"
+          className="flex flex-col items-start space-y-3 py-5 px-10 bg-gradient-to-br from-orange-50 to-orange-100"
         >
           <span className="flex items-center justify-center px-2.5 py-0.5 text-sm text-gray-700 font-medium bg-gray-200 rounded-full">
             동네질문
