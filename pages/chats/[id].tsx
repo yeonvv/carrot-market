@@ -99,7 +99,7 @@ const ChatDetail: NextPage = () => {
         <form className="relative flex items-center justify-center mx-auto max-w-md ">
           <input
             type="text"
-            className="appearance-none w-full rounded-full shadow-md bg-gradient-to-br from-orange-50 to-orange-100 placeholder-gray-400 border-orange-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500 transition"
+            className="appearance-none w-full px-5 rounded-full shadow-md bg-gradient-to-br from-orange-50 to-orange-100 placeholder-gray-400 border-orange-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500 transition"
           />
           <button type="submit" className="absolute right-2 rounded-full">
             <svg
