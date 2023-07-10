@@ -1,18 +1,20 @@
 import { NextPage } from "next";
 
-const Live: NextPage = () => {
+const Stream: NextPage = () => {
   return (
     <div className="h-full py-12 text-gray-700 bg-gradient-to-br from-orange-50 to-orange-100 divide-y-2">
       {[1, 2, 3, 4].map((_, i) => (
         <div key={i} className="py-5 px-10 space-y-3">
-          <div className="aspect-video w-full rounded-lg bg-gray-500 focus:ring-2 ring-orange-500 transition" />
+          <div className="aspect-video w-full rounded-lg bg-gray-500 cursor-pointer" />
           <div className="flex items-center space-x-2">
-            <div className="w-14 h-14 rounded-full bg-slate-400 cursor-pointer" />
+            <div className="w-10 h-10 rounded-full bg-slate-400 cursor-pointer" />
             <div className="flex flex-col">
-              <span className="text-sm text-gray-500 font-medium">
+              <span className="text-sm text-gray-500 font-medium cursor-pointer">
                 Steve Jebs
               </span>
-              <span className="text-base font-medium">Let's try carrots!</span>
+              <span className="text-base font-medium cursor-pointer">
+                Let's try carrots!
+              </span>
             </div>
           </div>
         </div>
@@ -31,4 +33,4 @@ const Live: NextPage = () => {
   );
 };
 
-export default Live;
+export default Stream;
