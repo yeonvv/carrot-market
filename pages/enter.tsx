@@ -1,13 +1,10 @@
+import cls from "@/libs/utils";
 import { useState } from "react";
 
 export default function Enter() {
   const [method, setMethod] = useState<"email" | "phone">("email");
   const onEmailClick = () => setMethod("email");
   const onPhoneClick = () => setMethod("phone");
-
-  function cls(...classnames: string[]) {
-    return classnames.join(" ");
-  }
 
   return (
     <div className="py-12 h-screen bg-gradient-to-br from-orange-50 to-orange-100">
