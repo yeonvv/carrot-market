@@ -95,8 +95,8 @@ const ChatDetail: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="fixed bottom-0 pb-5 w-full inset-x-0 bg-gradient-to-br from-orange-50 to-orange-100">
-        <form className="relative flex items-center justify-center mx-auto max-w-md ">
+      <div className="fixed bottom-0 w-full max-w-lg mx-auto pb-5 inset-x-0 bg-gradient-to-br from-orange-50 to-orange-100">
+        <form className="relative flex items-center justify-center mx-auto max-w-md">
           <input
             type="text"
             className="appearance-none w-full px-5 rounded-full shadow-md bg-gradient-to-br from-orange-50 to-orange-100 placeholder-gray-400 border-orange-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500 transition"

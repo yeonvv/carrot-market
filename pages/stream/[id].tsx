@@ -2,7 +2,7 @@ import { NextPage } from "next";
 
 const StreamDetail: NextPage = () => {
   return (
-    <div className="py-12 px-10 text-gray-700 bg-gradient-to-br from-orange-50 to-orange-100">
+    <div className="py-12 px-10 bg-gradient-to-br from-orange-50 to-orange-100">
       <div className="mb-10 space-y-3">
         <div className="w-full aspect-video bg-gray-400 rounded-lg ring-2 ring-offset-2 ring-orange-100 cursor-pointer" />
         <div className="flex items-center space-x-3 cursor-pointer">
@@ -89,8 +89,8 @@ const StreamDetail: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="fixed bottom-0 pb-5 w-full inset-x-0 bg-gradient-to-br from-orange-50 to-orange-100">
-        <form className="relative flex items-center justify-center mx-auto max-w-md ">
+      <div className="fixed bottom-0 pb-5 w-full max-w-lg mx-auto inset-x-0 bg-gradient-to-br from-orange-50 to-orange-100">
+        <form className="relative flex items-center justify-center mx-auto max-w-md">
           <input
             type="text"
             className="appearance-none w-full px-5 rounded-full shadow-md bg-gradient-to-br from-orange-50 to-orange-100 placeholder-gray-400 border-orange-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500 transition"
