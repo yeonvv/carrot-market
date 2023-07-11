@@ -2,5 +2,9 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <div className="w-full max-w-lg mx-auto text-gray-700 bg-gradient-to-br from-orange-50 to-orange-100">
+      <Component {...pageProps} />
+    </div>
+  );
 }
