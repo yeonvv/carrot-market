@@ -1,5 +1,6 @@
 import cls from "@/libs/utils";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 interface LayoutProps {
@@ -62,24 +63,30 @@ export default function Layout({
       </g>
     </svg>
   );
-
+  const router = useRouter();
+  const onBack = () => {
+    router.back();
+  };
   return (
     <div>
-      <div className="fixed top-0 flex w-full max-w-lg mx-auto py-2 text-xl text-white font-bold shadow-md bg-orange-400 rounded-b-full">
+      <div className="fixed top-0 flex w-full max-w-lg mx-auto max-h-[44px] py-2 text-xl text-white font-bold shadow-md bg-orange-400 rounded-b-full">
         {canGoBack ? (
-          <div className="flex justify-center items-center w-1/3">
+          <div
+            onClick={onBack}
+            className="flex justify-center items-center w-1/3 cursor-pointer"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="2.5"
               stroke="currentColor"
-              className="h-6"
+              className="w-6 h-6"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
               />
             </svg>
           </div>
@@ -91,7 +98,9 @@ export default function Layout({
             <span>{title}</span>
           </div>
         ) : null}
-        <div className="flex justify-center items-center w-1/3" />
+        <div className="flex justify-center items-center w-1/3">
+          {carrotSVG}
+        </div>
       </div>
       <div className={cls("pt-12", hasTabBar ? "pb-7" : "")}>{children}</div>
       {hasTabBar ? (

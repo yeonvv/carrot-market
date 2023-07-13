@@ -1,3 +1,4 @@
+import UploadButton from "@/components/button";
 import Layout from "@/components/layout";
 import type { NextPage } from "next";
 import Link from "next/link";
@@ -11,7 +12,7 @@ const Home: NextPage = () => {
             {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
               <div
                 key={i}
-                className="flex justify-between items-end py-4 px-10 bg-gradient-to-br from-orange-50 to-orange-100 cursor-pointer"
+                className="flex justify-between items-end py-3 px-10 bg-gradient-to-br from-orange-50 to-orange-100 cursor-pointer"
               >
                 <div className="flex">
                   <div className="w-20 h-20 mr-2 rounded-lg bg-gray-500" />
@@ -64,23 +65,7 @@ const Home: NextPage = () => {
           </div>
         </Link>
         <Link href={"/items/upload"}>
-          <button className="fixed bottom-20 right-5 p-2 text-white shadow-xl bg-orange-500 rounded-full hover:bg-orange-400 cursor-pointer transition">
-            <svg
-              className="h-9 w-9"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-              />
-            </svg>
-          </button>
+          <UploadButton home />
         </Link>
       </div>
     </Layout>

@@ -1,3 +1,4 @@
+import UploadButton from "@/components/button";
 import Layout from "@/components/layout";
 import { NextPage } from "next";
 import Link from "next/link";
@@ -63,22 +64,7 @@ const Coummunity: NextPage = () => {
           </Link>
         ))}
         <Link href={"/community/write"}>
-          <button className="fixed bottom-20 right-5 p-2 text-white shadow-xl bg-orange-500 rounded-full hover:bg-orange-400 cursor-pointer transition">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-              ></path>
-            </svg>
-          </button>
+          <UploadButton news />
         </Link>
       </div>
     </Layout>
