@@ -9,7 +9,7 @@ export default function Star({ star }: StarProps) {
 
   return (
     <div className="flex">
-      {Array.from({ length: totalStars }).map((_, i) => (
+      {Array.from({ length: totalStars }, (_, i) => (
         <svg
           key={i}
           className={cls(
