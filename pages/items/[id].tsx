@@ -1,4 +1,6 @@
+import Button from "@/components/button";
 import Layout from "@/components/layout";
+import Photo from "@/components/photo";
 import type { NextPage } from "next";
 
 const ItemDetail: NextPage = () => {
@@ -8,7 +10,7 @@ const ItemDetail: NextPage = () => {
         <div className="space-y-5">
           <div className="h-96 w-96 bg-gray-400 rounded-lg ring-2 ring-offset-2 ring-orange-100 cursor-pointer" />
           <div className="flex items-center space-x-3 cursor-pointer">
-            <div className="w-12 h-12 rounded-full bg-slate-400 ring-2 ring-offset-1 ring-orange-100" />
+            <Photo lg />
             <div className="space-y-1">
               <p className="text-sm text-gray-700 font-medium">Steve Jebs</p>
               <p className="text-xs text-gray-500">View profile &rarr;</p>
@@ -33,9 +35,7 @@ const ItemDetail: NextPage = () => {
               </p>
             </div>
             <div className="flex items-center justify-center space-x-3">
-              <button className="flex-1 py-2 px-5 bg-orange-500 text-white font-medium rounded-xl shadow-lg hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition">
-                Talk to seller
-              </button>
+              <Button text="Talk to seller" />
               <button className="text-gray-500 hover:text-red-500 hover:scale-125 transition">
                 <svg
                   className="h-6 w-6"

@@ -1,3 +1,5 @@
+import Button from "@/components/button";
+import Input from "@/components/input";
 import cls from "@/libs/utils";
 import { useState } from "react";
 
@@ -40,43 +42,33 @@ export default function Enter() {
           </div>
         </div>
         <div className="px-4">
-          <form className="flex flex-col mt-5 mb-10">
-            <label
-              htmlFor="choice"
-              className="text-sm text-gray-700 font-medium"
-            >
-              {method === "email" ? "Email address" : null}
-              {method === "phone" ? "Phone number" : null}
-            </label>
+          <form className="flex flex-col mb-10">
             <div className="my-2">
               {method === "email" ? (
-                <input
-                  id="choice"
+                <Input
+                  label="Email address"
                   type="email"
-                  className="appearance-none w-full transition shadow-md rounded-lg placeholder-gray-400 border-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-                  required
                   placeholder="Input your email"
                 />
               ) : null}
               {method === "phone" ? (
-                <div className="flex rounded-lg shadow-md">
-                  <span className="flex items-center justify-center px-3 rounded-l-lg bg-gray-100 text-sm text-gray-500 select-none border border-r-0 border-gray-300">
-                    +82
-                  </span>
-                  <input
-                    id="choice"
-                    type="number"
-                    className="appearance-none w-full transition rounded-r-lg placeholder-gray-400 border-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-                    required
-                    placeholder="Input your phone number"
-                  />
-                </div>
+                <Input
+                  label="Phone number"
+                  type="number"
+                  placeholder="Input your phone number"
+                  phone
+                />
               ) : null}
             </div>
-            <button className="mt-2 p-2 bg-orange-500 text-white font-medium rounded-xl shadow-lg hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition">
-              {method === "email" ? "Get login link" : null}
-              {method === "phone" ? "Get one-time password" : null}
-            </button>
+            <Button
+              text={
+                method === "email"
+                  ? "Get login link"
+                  : method === "phone"
+                  ? "Get one-time password"
+                  : ""
+              }
+            />
           </form>
           <div>
             <div className="relative">

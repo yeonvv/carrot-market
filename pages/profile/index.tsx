@@ -1,4 +1,5 @@
 import Layout from "@/components/layout";
+import Photo from "@/components/photo";
 import type { NextPage } from "next";
 import Link from "next/link";
 
@@ -7,7 +8,7 @@ const Profile: NextPage = () => {
     <Layout title="Profile" hasTabBar>
       <div>
         <div className="flex items-center px-10 space-x-3 pb-5">
-          <div className="w-14 h-14 rounded-full bg-slate-400 cursor-pointer" />
+          <Photo lg />
           <div className="flex flex-col space-y-1">
             <span className="text-base font-medium">Steve Jebs</span>
             <Link href={"/profile/edit"}>
@@ -31,7 +32,7 @@ const Profile: NextPage = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-around pb-5 border-b">
+        <div className="flex justify-around pb-5 border-b border-orange-200">
           <Link href={"/profile/sold"}>
             <div>
               <div className="flex flex-col items-center justify-center space-y-1 h-12 w-12 rounded-full font-medium bg-gradient-to-br from-orange-50 to-orange-300 hover:bg-gradient-to-br hover:from-orange-300 hoverto-orange-50 cursor-pointer">
@@ -100,7 +101,7 @@ const Profile: NextPage = () => {
           {[1, 2, 3].map((_, i) => (
             <div key={i} className="py-5 space-y-2">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 rounded-full bg-slate-400 cursor-pointer" />
+                <Photo md />
                 <div className="flex flex-col items-start">
                   <h4 className="pl-1 text-sm font-bold cursor-pointer">
                     니꼬

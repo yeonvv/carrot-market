@@ -1,4 +1,7 @@
+import Button from "@/components/button";
+import Input from "@/components/input";
 import Layout from "@/components/layout";
+import Textarea from "@/components/textarea";
 import { NextPage } from "next";
 
 const Upload: NextPage = () => {
@@ -24,49 +27,10 @@ const Upload: NextPage = () => {
             <input type="file" className="hidden" />
           </label>
         </div>
-        <div className="text-gray-700 space-y-2">
-          <label htmlFor="name" className="text-sm text-gray-700 font-medium">
-            name
-          </label>
-          <div className="flex items-center relative">
-            <input
-              id="name"
-              type="text"
-              className="appearance-none w-full bg-gradient-to-br from-orange-50 to-orange-100 shadow-md rounded-lg placeholder-gray-400 border-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500 transition"
-            />
-          </div>
-        </div>
-        <div className="text-gray-700 space-y-2">
-          <label htmlFor="price" className="text-sm text-gray-700 font-medium">
-            Price
-          </label>
-          <div className="flex items-center relative">
-            <span className="absolute left-3 text-gray-500">$</span>
-            <input
-              id="price"
-              type="text"
-              placeholder="0.00"
-              className="appearance-none w-full pl-7 bg-gradient-to-br from-orange-50 to-orange-100 shadow-md rounded-lg placeholder-gray-400 border-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500 transition"
-            />
-            <span className="absolute right-3 text-gray-500">USD</span>
-          </div>
-        </div>
-        <div className="flex flex-col space-y-2">
-          <label
-            htmlFor="description"
-            className="text-sm text-gray-700 font-medium"
-          >
-            Description
-          </label>
-          <textarea
-            id="description"
-            rows={4}
-            className="appearance-none w-full shadow-md rounded-lg bg-gradient-to-br from-orange-50 to-orange-100 placeholder-gray-400 border-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500 transition"
-          />
-          <button className="w-full py-2 bg-orange-500 text-white font-medium rounded-xl shadow-lg hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition">
-            Upload product
-          </button>
-        </div>
+        <Input label="Name" type="text" />
+        <Input label="Price" type="text" price placeholder="0.00" />
+        <Textarea label="Dscription" rows={4} />
+        <Button text="Upload Product" />
       </form>
     </Layout>
   );
