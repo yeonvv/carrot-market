@@ -8,7 +8,7 @@ const ItemDetail: NextPage = () => {
     <Layout title="itmes" canGoBack>
       <div className="px-10 space-y-5">
         <div className="space-y-5">
-          <div className="h-96 w-96 bg-gray-400 rounded-lg ring-2 ring-offset-2 ring-orange-100 cursor-pointer" />
+          <div className="h-96 w-96 bg-gray-400 rounded-lg cursor-pointer" />
           <div className="flex items-center space-x-3 cursor-pointer">
             <Photo lg />
             <div className="space-y-1">
