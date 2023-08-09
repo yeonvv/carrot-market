@@ -3,7 +3,7 @@ import type { UseFormRegisterReturn } from "react-hook-form";
 
 interface InputProps {
   label: string;
-  type: React.HTMLInputTypeAttribute;
+  type: "email" | "number";
   placeholder?: string;
   price?: boolean;
   phone?: boolean;

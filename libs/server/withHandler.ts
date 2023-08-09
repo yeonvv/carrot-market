@@ -1,9 +1,9 @@
-import { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
+import { NextApiHandler } from "next";
 
-export default function withHandler(
+const withHandler = (
   method: "GET" | "POST" | "DELETE",
   handler: NextApiHandler
-): NextApiHandler {
+): NextApiHandler => {
   return async (req, res) => {
     if (req.method !== method) {
       return res.status(405).end();
@@ -15,4 +15,6 @@ export default function withHandler(
       return res.status(500).json({ error });
     }
   };
-}
+};
+
+export default withHandler;

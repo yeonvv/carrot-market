@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 
 interface EnterForm {
   email?: string;
-  phone?: string;
+  phone?: number;
 }
 
 export default function Enter() {
@@ -25,7 +25,7 @@ export default function Enter() {
   const onValid = (validForm: EnterForm) => {
     enter(validForm);
   };
-  console.log(loading, data, error);
+
   return (
     <div className="py-12 h-screen bg-gradient-to-br from-orange-50 to-orange-100">
       <h3 className="text-3xl font-bold text-center text-gray-700">

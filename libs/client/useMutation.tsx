@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { set } from "react-hook-form";
 
 interface UseMutationState {
   loading: boolean;
@@ -29,12 +28,12 @@ export default function useMutation(url: string): UseMutationResult {
       },
       body: JSON.stringify(data),
     })
-      .then((response) => response.json().catch(() => {}))
-      .then((responseData) => {
+      .then((res) => res.json().catch(() => {}))
+      .then((resData) => {
         setState((prevState) => ({
           ...prevState,
           loading: false,
-          data: responseData,
+          data: resData,
         }));
       })
       .catch((error) => {
