@@ -1,9 +1,7 @@
-import Chat from "@/components/chat";
-import FloatingBUtton from "@/components/floating-button";
-import Layout from "@/components/layout";
-import Photo from "@/components/photo";
+import Chat from "@components/chat";
+import FloatingButton from "@components/floating-button";
+import Layout from "@components/layout";
 import { NextPage } from "next";
-import Link from "next/link";
 
 const Chats: NextPage = () => {
   return (
@@ -46,7 +44,7 @@ const Chats: NextPage = () => {
             lastMsg="See you tomorrow in the coner at 2pm."
           />
         </div>
-        <FloatingBUtton chat />
+        <FloatingButton chat />
       </div>
     </Layout>
   );

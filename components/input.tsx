@@ -1,11 +1,13 @@
-import cls from "@/libs/utils";
+import cls from "@libs/client/utils";
+import type { UseFormRegisterReturn } from "react-hook-form";
 
 interface InputProps {
   label: string;
-  type: string;
+  type: React.HTMLInputTypeAttribute;
   placeholder?: string;
   price?: boolean;
   phone?: boolean;
+  register?: UseFormRegisterReturn;
 }
 
 export default function Input({
@@ -14,6 +16,7 @@ export default function Input({
   placeholder,
   price,
   phone,
+  register,
 }: InputProps) {
   return (
     <div className="w-full space-y-2">
@@ -37,6 +40,7 @@ export default function Input({
         <input
           id={label}
           type={type}
+          {...register}
           placeholder={placeholder}
           className={cls(
             "appearance-none w-full bg-gradient-to-br from-orange-50 to-orange-100 shadow-md placeholder-gray-400 border-gray-400 focus:outline-none focus:ring-orange-500 focus:border-orange-500 transition",

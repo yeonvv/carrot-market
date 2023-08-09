@@ -1,4 +1,4 @@
-import cls from "@/libs/utils";
+import cls from "@libs/client/utils";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
@@ -28,7 +28,7 @@ export default function Layout({
       <g>
         <g>
           <g>
-            <g id="XMLID_18_">
+            <g id="XMLid_18_">
               <g>
                 <path
                   style={{ fill: "#F78F1E" }}

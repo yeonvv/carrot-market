@@ -1,6 +1,6 @@
-import FloatingBUtton from "@/components/floating-button";
-import Layout from "@/components/layout";
-import News from "@/components/news";
+import FloatingBUtton from "@components/floating-button";
+import Layout from "@components/layout";
+import News from "@components/news";
 import { NextPage } from "next";
 import Link from "next/link";
 

@@ -1,6 +1,6 @@
-import Layout from "@/components/layout";
-import Photo from "@/components/photo";
-import Review from "@/components/review";
+import Layout from "@components/layout";
+import Photo from "@components/photo";
+import Review from "@components/review";
 import type { NextPage } from "next";
 import Link from "next/link";
 

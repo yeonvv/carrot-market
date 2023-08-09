@@ -1,6 +1,6 @@
-import FloatingBUtton from "@/components/floating-button";
-import Item from "@/components/item";
-import Layout from "@/components/layout";
+import FloatingButton from "@components/floating-button";
+import Item from "@components/item";
+import Layout from "@components/layout";
 import type { NextPage } from "next";
 import Link from "next/link";
 
@@ -89,7 +89,7 @@ const Home: NextPage = () => {
           hearts={14}
         />
         <Link href={"/items/upload"}>
-          <FloatingBUtton home />
+          <FloatingButton home />
         </Link>
       </div>
     </Layout>

@@ -1,6 +1,6 @@
-import Button from "@/components/button";
-import Layout from "@/components/layout";
-import Photo from "@/components/photo";
+import Layout from "@components/layout";
+import Photo from "@components/photo";
+import Button from "@components/button";
 import type { NextPage } from "next";
 
 const CommunityPostDetail: NextPage = () => {

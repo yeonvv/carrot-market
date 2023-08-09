@@ -1,6 +1,6 @@
-import ChatInput from "@/components/chat-input";
-import Layout from "@/components/layout";
-import Message from "@/components/message";
+import ChatInput from "@components/chat-input";
+import Layout from "@components/layout";
+import Message from "@components/message";
 import { NextPage } from "next";
 
 const ChatDetail: NextPage = () => {

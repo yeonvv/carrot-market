@@ -1,13 +1,31 @@
-import Button from "@/components/button";
-import Input from "@/components/input";
-import cls from "@/libs/utils";
+import Button from "@components/button";
+import Input from "@components/input";
+import useMutation from "@libs/client/useMutation";
+import cls from "@libs/client/utils";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+
+interface EnterForm {
+  email?: string;
+  phone?: string;
+}
 
 export default function Enter() {
+  const [enter, { loading, data, error }] = useMutation("/api/users/enter");
+  const { register, handleSubmit, reset } = useForm<EnterForm>();
   const [method, setMethod] = useState<"email" | "phone">("email");
-  const onEmailClick = () => setMethod("email");
-  const onPhoneClick = () => setMethod("phone");
-
+  const onEmailClick = () => {
+    reset();
+    setMethod("email");
+  };
+  const onPhoneClick = () => {
+    reset();
+    setMethod("phone");
+  };
+  const onValid = (validForm: EnterForm) => {
+    enter(validForm);
+  };
+  console.log(loading, data, error);
   return (
     <div className="py-12 h-screen bg-gradient-to-br from-orange-50 to-orange-100">
       <h3 className="text-3xl font-bold text-center text-gray-700">
@@ -42,10 +60,16 @@ export default function Enter() {
           </div>
         </div>
         <div className="px-4">
-          <form className="flex flex-col mb-10">
+          <form
+            onSubmit={handleSubmit(onValid)}
+            className="flex flex-col mb-10"
+          >
             <div className="my-2">
               {method === "email" ? (
                 <Input
+                  register={register("email", {
+                    required: "이메일을 입력하세요",
+                  })}
                   label="Email address"
                   type="email"
                   placeholder="Input your email"
@@ -53,6 +77,9 @@ export default function Enter() {
               ) : null}
               {method === "phone" ? (
                 <Input
+                  register={register("phone", {
+                    required: "전화번호를 입력하세요",
+                  })}
                   label="Phone number"
                   type="number"
                   placeholder="Input your phone number"
