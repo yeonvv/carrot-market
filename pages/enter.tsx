@@ -23,6 +23,7 @@ export default function Enter() {
     setMethod("phone");
   };
   const onValid = (validForm: EnterForm) => {
+    if (loading) return;
     enter(validForm);
   };
 
@@ -89,7 +90,9 @@ export default function Enter() {
             </div>
             <Button
               text={
-                method === "email"
+                loading
+                  ? "Laoding"
+                  : method === "email"
                   ? "Get login link"
                   : method === "phone"
                   ? "Get one-time password"
