@@ -1,10 +1,13 @@
 // api를 만들기 위해 또 다른 서버를 만들 필요가 없다.
+import mail from "@sendgrid/mail";
 import twilio from "twilio";
 import client from "@libs/server/client";
 import withHandler, { ResponseType } from "@libs/server/withHandler";
 import { NextApiHandler } from "next";
 
 const twilioClient = twilio(process.env.TWILIO_SID, process.env.TWILIO_TOKEN);
+
+mail.setApiKey(process.env.SENDGRID_API!);
 
 const handler: NextApiHandler<ResponseType> = async (req, res) => {
   const { email, phone } = req.body;
@@ -35,6 +38,15 @@ const handler: NextApiHandler<ResponseType> = async (req, res) => {
       body: `Your login to is ${payload}`,
     });
     console.log(message);
+  } else if (email) {
+    const email = await mail.send({
+      from: process.env.MY_EMAIL!,
+      to: process.env.SENDGRID_MAIL,
+      subject: "Your Carrot Market Verification Email",
+      text: `Your Token is ${payload}`,
+      html: `<strong>Your Token is ${payload}</strong>`,
+    });
+    console.log(email);
   }
   console.log(token);
   // if (email) {
