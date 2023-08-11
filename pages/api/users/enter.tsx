@@ -1,8 +1,10 @@
 // api를 만들기 위해 또 다른 서버를 만들 필요가 없다.
-
+import twilio from "twilio";
 import client from "@libs/server/client";
 import withHandler, { ResponseType } from "@libs/server/withHandler";
 import { NextApiHandler } from "next";
+
+const twilioClient = twilio(process.env.TWILIO_SID, process.env.TWILIO_TOKEN);
 
 const handler: NextApiHandler<ResponseType> = async (req, res) => {
   const { email, phone } = req.body;
@@ -25,6 +27,15 @@ const handler: NextApiHandler<ResponseType> = async (req, res) => {
       },
     },
   });
+  if (phone) {
+    const message = await twilioClient.messages.create({
+      messagingServiceSid: process.env.TWILIO_MSID,
+      from: process.env.TWILIO_NUMBER,
+      to: process.env.MY_PHONE!,
+      body: `Your login to is ${payload}`,
+    });
+    console.log(message);
+  }
   console.log(token);
   // if (email) {
   //   user = await client.user.findUnique({
@@ -63,9 +74,7 @@ const handler: NextApiHandler<ResponseType> = async (req, res) => {
   //   }
   //   console.log(user);
   // }
-  return res.json({
-    ok: true,
-  });
+  return res.json({ ok: true });
 };
 
 export default withHandler("POST", handler);
